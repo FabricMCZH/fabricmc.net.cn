@@ -1,47 +1,48 @@
 ---
 layout: default
-title: Develop
+title: 开发
 permalink: /develop/
 topnav: true
 ---
 
-# Develop
+# 开发
 
-This page provides a curated selection of resources to support both new mod creation and the maintenance of existing projects. 
+本页面提供精选资源以支持新 Fabric Mod 的创建和现有项目的维护。
 
-If you require additional help, [the Fabric Discord server](https://discord.gg/v6v4pMv) offers dedicated mod development channels with resources and advice from the community.
+如果您需要更多帮助，[Fabric Discord 服务器](https://discord.gg/v6v4pMv) 提供专门的模组开发频道，其中包含来自社区的资源和建议。
 
 <div class="home post-content">
 <hr>
    <section>
       <div class="row-3">
          <article class="column">
-            <h3>Getting Started</h3>
+            <h3>入门</h3>
             <section class="with-button-group">
-               <p class="component-body">If you want to learn how to create mods, you should refer to the wiki or the official documentation site.</p>
+               <p class="component-body">如果您想学习如何制作 Fabric Mod，您应该参考 Fabric Wiki 或官方文档网站。<br/><br/></p>
             </section>
             <div class="button-group">
-							<a class="button secondary" href="https://fabricmc.net/wiki/start">Fabric Wiki</a>
-							<a class="button secondary" href="https://docs.fabricmc.net/">Fabric Documentation</a>
+							<a class="button secondary" href="https://wiki.fabricmc.net/zh_cn:start">Fabric Wiki</a>
+							<a class="button secondary" href="https://docs.fabricmc.net/zh_cn/">Fabric 文档</a>
+							<a class="button secondary" href="https://zh.minecraft.wiki/">Minecraft Wiki</a>
 						</div>
          </article>
          <article class="column">
-            <h3>Project Templates</h3>
+            <h3>项目模板</h3>
             <section class="with-button-group">
-               <p>Project templates offer a standardized foundation for Fabric mods - allowing you to quickly create new projects.</p>
+               <p>项目模板为 Fabric Mod 提供了一个标准化的基础，使您可以快速创建新项目。<br/><br/></p>
             </section>
             <div class="button-group">
-							<a class="button secondary" href="https://github.com/FabricMC/fabric-example-mod">Example Mod Repository</a>
-							<a class="button secondary" href="./cli/">Fabric Command Line Tools</a>
-							<a class="button secondary" href="./template/">Online Template Mod Generator</a>
+							<a class="button secondary" href="https://github.com/FabricMC/fabric-example-mod">示例 Fabric Mod 仓库</a>
+							<a class="button secondary" href="./cli/">Fabric 命令行工具</a>
+							<a class="button secondary" href="./template/">在线 Fabric Mod 模板生成器</a>
 						</div>
          </article>
          <article class="column">
             <h3>Javadoc</h3>
             <section class="with-button-group">
-               <p>Easily access Javadoc for toolchain projects and the game, either online or directly within your IDE.</p>
+               <p>轻松访问工具链项目和 Minecraft 的 Javadoc，无论是在线访问还是直接在 IDE 中访问。</p>
             </section>
-            <noscript style="color:red">You need Javascript to show the documentation links</noscript>
+            <noscript style="color:red">您需要启用 Javascript 才能显示文档链接</noscript>
 <div class="fabric-component" data-component="Documentation"></div>
          </article>
       </div>
@@ -49,7 +50,7 @@ If you require additional help, [the Fabric Discord server](https://discord.gg/v
    <hr>
 </div>
 
-<noscript style="color:red">You need Javascript to show the latest Versions</noscript>
+<noscript style="color:red">您需要启用 Javascript 才能显示最新版本</noscript>
 <div class="fabric-component" data-component="Versions"></div>
 
 {% assign cacheBust = site.time | date:'?v=%s' %}

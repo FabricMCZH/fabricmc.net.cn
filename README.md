@@ -1,6 +1,6 @@
-# fabricmc.net
+# fabricmc.net.cn
 
-This repository contains the source code and content for [https://fabricmc.net/](https://fabricmc.net/). Jekyll is used as the static site generator. A small TypeScript Svelte project located in /scripts powers the interactive parts of the site.
+This repository contains the source code and content for [https://fabricmc.net.cn/](https://fabricmc.net.cn/). Jekyll is used as the static site generator. A small TypeScript Svelte project located in /scripts powers the interactive parts of the site.
 
 ## License
 
@@ -62,6 +62,6 @@ Then open http://localhost:4000 in your browser of choice. The site should updat
 
 Used to build and run a production like server.
 
-* `docker build -f Dockerfile.dev -t fabricmc-net .`
-* `docker run -p 8080:80 fabricmc.net`
+* `docker build -f Dockerfile.dev -t fabricmc-net-cn .`
+* `docker run -p 8080:80 fabricmc-net-cn`
 * `http://localhost:8080/`

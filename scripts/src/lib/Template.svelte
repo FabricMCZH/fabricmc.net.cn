@@ -122,21 +122,21 @@
 
 {#await versions}
     <p>
-        Loading data
+        正在加载数据
     
         <!-- Force the icon fonts to be loaded, https://stackoverflow.com/questions/2756575 -->
-        <span style="font-family: {ICON_FONT};">...</span>
+        <span style="font-family: {ICON_FONT};">……</span>
     </p>
 {:then data}
     <div class="template">
         <div class="form-line">
-            <h3>Mod Name:</h3>
+            <h3>Mod 名：</h3>
             <hr />
 
             {#if customModId != undefined}
-                <p>Choose a name for your new mod.</p>
+                <p>为你的新 Mod 选择一个名字。</p>
             {:else}
-                <p>Choose a name for your new mod. The mod ID will be <code>{modid}</code>. <a href={""} on:click|preventDefault={useCustomModId}>Use custom id</a></p>
+                <p>为你的新 Mod 选择一个名字。Mod ID 将是 <code>{modid}</code>. <a href={""} on:click|preventDefault={useCustomModId}>使用自定义 ID</a></p>
             {/if}
 
             <input id="project-name" bind:value={projectName} on:blur={doFormatProjectName} />
@@ -151,9 +151,9 @@
 
         {#if customModId != undefined}
             <div class="form-line">
-                <h3>Mod ID:</h3>
+                <h3>Mod ID：</h3>
                 <hr />
-                <p>Enter the modid you wish to use for your mod. <a href={""} on:click|preventDefault={useDefaultModId}>Use default</a></p>
+                <p>请输入您希望用于 Mod 的 Mod ID。<a href={""} on:click|preventDefault={useDefaultModId}>使用默认 Mod ID</a></p>
                 {#if customIdErrors != undefined}
                     {#each customIdErrors as error}
                         <li style="color: red">{error}</li>
@@ -169,8 +169,7 @@
             <h3>Package Name:</h3>
             <hr />
             <p>
-                Choose a unique package name for your new mod. The package name
-                should be unique to you. If you are unsure about this use <code>name.modid</code>.
+                为你的新 Mod 选择一个独一无二的包名。包名必须只有你才能使用。如果你不确定，可以使用 <code>name.modid</code> 格式的包名。
             </p>
             <input id="package-name" on:keyup={doFormatPackageName} bind:value={packageName} />
 
@@ -180,11 +179,10 @@
         </div>
 
         <div class="form-line">
-            <h3>Minecraft Version:</h3>
+            <h3>Minecraft 版本：</h3>
             <hr />
             <p>
-                Select the version of Minecraft that you wish to use for your
-                mod.
+                选择你希望 Mod 支持的 Minecraft 版本。
             </p>
             <select
                 id="minecraft-version"
@@ -200,26 +198,25 @@
         <hr>
         <br>
 
-        <h4>Advanced Options:</h4>
+        <h4>高级选项：</h4>
 
         <div>
             <div class="option-container">
                 <input id="kotlin" type="checkbox" class="option-input" bind:checked={useKotlin} />
-                <label for="kotlin" class="option-label">Kotlin Programming Language</label>
+                <label for="kotlin" class="option-label">Kotlin 编程语言</label>
             </div>
             <p class="option-body">
-                <a href="https://kotlinlang.org/">Kotlin</a> is a alternative programming language that can be used to develop mods.
-                The <a href="https://github.com/FabricMC/fabric-language-kotlin">Fabric Kotlin language adapter</a> is used to enable support for creating Fabric Kotlin mods.
+                <a href="https://kotlinlang.org/">Kotlin</a> 是另一种可用于开发 Fabric Mod 的编程语言。<a href="https://github.com/FabricMC/fabric-language-kotlin">Fabric Kotlin 适配器</a> 用于启用对使用 Kotlin 制作 Fabric Mod 的支持。
             </p>
         </div>
 
         <div>
             <div class="option-container">
                 <input id="mojmap" type="checkbox" class="option-input" bind:checked={mojmap} />
-                <label for="mojmap" class="option-label">Mojang Mappings</label>
+                <label for="mojmap" class="option-label">官方混淆映射表</label>
             </div>
             <p class="option-body">
-                Use Mojang's official mappings rather than Yarn. Note that Mojang's mappings come with a usable yet more restrictive license than Yarn. Use them at your own risk.
+                使用 Mojang 官方的混淆映射表，而不是 Yarn。请注意，Mojang 官方的混淆映射表虽然完全可用，但是许可协议比 Yarn 有着更多的限制。风险自负。
             </p>
         </div>
 
@@ -227,10 +224,10 @@
         <div>
             <div class="option-container">
                 <input id="datagen" type="checkbox" class="option-input" bind:checked={dataGeneration} />
-                <label for="datagen" class="option-label">Data Generation</label>
+                <label for="datagen" class="option-label">数据生成</label>
             </div>
             <p class="option-body">
-                This option configures the <a href="https://fabricmc.net/wiki/tutorial:datagen_setup">Fabric Data Generation API</a> in your mod. This allows you to generate resources such as recipes from code at build time.
+                此选项配置 Mod 使用 <a href="https://wiki.fabricmc.net/tutorial:datagen_setup">Fabric 数据生成 API</a>。它允许您在编译时从代码生成合成配方等数据包资源文件。
             </p>
         </div>
         {/if}
@@ -239,12 +236,12 @@
         <div>
             <div class="option-container">
                 <input id="splitSources" type="checkbox" class="option-input" bind:checked={splitSources} />
-                <label for="splitSources" class="option-label">Split client and common sources</label>
+                <label for="splitSources" class="option-label">拆分源代码集</label>
             </div>
             <p class="option-body">
-                A common source of server crashes comes from calling client only code when installed on a server.
-                This option configures your mod to be built from two source sets, client and main.
-                This enforces a clear separation between the client and server code.
+                服务器崩溃的常见原因是，在服务器上安装 Mod 时调用了仅供客户端使用的代码。
+                此选项会将您的模组配置为使用两套源代码集构建：client (客户端集) 和 main (主程序集，即公共集)。
+                这可以确保客户端代码和服务器代码被清晰分离。
             </p>
         </div>
         {/if}
@@ -253,7 +250,7 @@
 
         {#if loading}
             <a class="button primary download-button" href={""}>
-                <DownloadIcon /> Generating...
+                <DownloadIcon /> 正在生成项目文件……
             </a>
         {:else}
             <a
@@ -261,16 +258,14 @@
                 href={""}
                 on:click|preventDefault={generate}
             >
-                <DownloadIcon /> Download Template (.ZIP)
+                <DownloadIcon /> 下载生成的项目文件 (.zip)
             </a>
         {/if}
     </div>
 {:catch error}
-    <p style="color: red">Error: {error.message}</p>
+    <p style="color: red">错误：{error.message}</p>
     <p>
-        For support please visit one of our
-        <a href="/discuss/">community discussion</a>
-        groups.
+      如需帮助，请访问我们的<a href="/discuss/">社区讨论群组</a>。
     </p>
 {/await}
 

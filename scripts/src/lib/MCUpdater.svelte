@@ -19,5 +19,5 @@
 <main>
   <LegacyVersion bind:this={legacyVersion} />
   <br />
-  <button class="button primary large" on:click={copyImportEntry}>Copy MCUpdater Import entry</button>
+  <button class="button primary large" on:click={copyImportEntry}>复制 MCUpdater 导入条目</button>
 </main>

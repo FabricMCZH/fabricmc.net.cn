@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Blog
+title: 博客
 permalink: /blog/
 ---

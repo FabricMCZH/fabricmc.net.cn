@@ -1,14 +1,16 @@
 
 links:
-  - title: download
+  - title: Fabric 官网
+    url: https://fabricmc.net
+  - title: 下载
     page: use/installer.md
-  - title: blog
+  - title: 博客
     page: blog.md
-  - title: develop
+  - title: 开发
     page: develop.md
-  - title: discuss
+  - title: 讨论
     page: discuss.md
-  - title: Docs
-    url: https://docs.fabricmc.net/
-  - title: wiki
-    url: https://fabricmc.net/wiki/
+  - title: 文档
+    url: https://docs.fabricmc.net/zh_cn/
+  - title: Wiki
+    url: https://wiki.fabricmc.net/zh_cn:start

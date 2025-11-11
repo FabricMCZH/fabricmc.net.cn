@@ -27,7 +27,7 @@
 
 <main>
   {#await versions}
-    <p>Loading versions..</p>
+    <p>正在加载版本信息……</p>
   {:then data}
 
     {#if expertOptions}
@@ -46,7 +46,7 @@
           {#if latest?.stable}Installer Version: {latest.version} (Latest){/if}
           {#if !expertOptions}
             <a href={'#'} on:click|preventDefault={showExpertOptions}>
-              Show beta versions
+              显示 Beta 测试版本
             </a>
           {/if}
         </p>
@@ -55,38 +55,35 @@
 
     <div class="download">
       <p>
-        The Minecraft and Fabric Loader versions can be selected in the installer, this download
-        works for every version we support.
+        安装程序中可以选择 Minecraft 和 Fabric Loader 的版本，此下载适用于我们支持的所有版本。
       </p>
 
       {#if win32}
       <p>
         <a class="button primary large" href={selectedVersion.replace('.jar', '.exe')}>
-          <DownloadIcon/> Download for Windows
+          <DownloadIcon/> 下载适用于 Windows 的安装程序
         </a>
         <br>
         <a href={selectedVersion}>
-          Download universal jar
+          下载通用安装程序 (.jar)
         </a>
       </p>
     {:else}
       <p>
         <a class="button primary large" href={selectedVersion}>
-          <DownloadIcon/> Download installer (Universal/.JAR)
+          <DownloadIcon/> 下载通用安装程序 (.jar)
         </a>
         <br>
         <a href={selectedVersion.replace('.jar', '.exe')}>
-          Download for Windows
+          下载适用于 Windows 的安装程序
         </a>
       </p>
     {/if}
     </div>
   {:catch error}
-    <p style="color: red">Error: {error.message}</p>
+    <p style="color: red">错误：{error.message}</p>
     <p>
-      For support please visit one of our
-      <a href="/discuss/">community discussion</a>
-      groups.
+      如需帮助，请访问我们的<a href="/discuss/">社区讨论群组</a>。
     </p>
   {/await}
 

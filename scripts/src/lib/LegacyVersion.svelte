@@ -33,15 +33,15 @@
 
   <label>
     <input type="checkbox" bind:checked={listSnapshots} />
-    Show snapshot versions
+    显示快照版本
   </label>
   <br />
   <br />
 
   {#await gameVersions}
-    <p>Loading versions..</p>
+    <p>正在加载版本信息……</p>
   {:then data}
-    Game version:
+    Minecraft 版本：
     <select bind:value={selectedGameVersion} style="min-width: 200px">
       {#each data as version}
         {#if version.stable || listSnapshots}
@@ -50,11 +50,9 @@
       {/each}
     </select>
   {:catch error}
-    <p style="color: red">Error: {error.message}</p>
+    <p style="color: red">错误：{error.message}</p>
     <p>
-      For support please vist one of our
-      <a href="/discuss/">community discussion</a>
-      groups.
+      如需帮助，请访问我们的<a href="/discuss/">社区讨论群组</a>。
     </p>
   {/await}
 
@@ -62,20 +60,18 @@
   <br />
 
   {#await loaderVersions}
-    <p>Loading versions..</p>
+    <p>正在加载版本信息……</p>
   {:then data}
-    Loader version:
+    Fabric Loader 版本：
     <select bind:value={selectedLoaderVersion} style="min-width: 200px">
       {#each data as version}
         <option value={version.version}>{version.version}</option>
       {/each}
     </select>
   {:catch error}
-    <p style="color: red">Error: {error.message}</p>
+    <p style="color: red">错误：{error.message}</p>
     <p>
-      For support please vist one of our
-      <a href="/discuss/">community discussion</a>
-      groups.
+      如需帮助，请访问我们的<a href="/discuss/">社区讨论群组</a>。
     </p>
   {/await}
 

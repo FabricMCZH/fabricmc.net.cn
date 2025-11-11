@@ -1,6 +1,6 @@
 ---
 layout: use
-title: "Installation for Technic"
+title: "在 Technic 上安装"
 permalink: /use/technic/
 svelte_component: Technic
 ---

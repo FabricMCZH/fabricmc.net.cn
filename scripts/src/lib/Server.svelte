@@ -35,12 +35,12 @@
 
 <main>
 {#await versions}
-  <p>Loading versions..</p>
+  <p>正在加载版本信息……</p>
 {:then data}
 
   <div class="download">
     <div class="form-line">
-      <label for="minecraft-version">Minecraft Version:</label>
+      <label for="minecraft-version">Minecraft 版本：</label>
       <select id="minecraft-version" bind:value={gameVersion} style="min-width: 200px">
         {#each data.game as version}
           <option value={version.version}>{version.version}</option>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="form-line">
-      <label for="loader-version">Fabric Loader Version:</label>
+      <label for="loader-version">Fabric Loader 版本：</label>
       <select id="loader-version" bind:value={loaderVersion} style="min-width: 200px">
         {#each data.loader as version}
           <option value={version.version}>{version.version}</option>
@@ -58,7 +58,7 @@
     </div>
 
     <div class="form-line">
-      <label for="installer-version">Installer Version:</label>
+      <label for="installer-version">安装程序版本：</label>
       <select id="installer-version" bind:value={installerVersion} style="min-width: 200px">
         {#each data.installer as version}
           <option value={version.version}>{version.version}</option>
@@ -67,39 +67,37 @@
     </div>
 
     <div class="download">
-      <a class="button primary large" href={serverJarUrl}><DownloadIcon />Executable Server (.jar)</a>
+      <a class="button primary large" href={serverJarUrl}><DownloadIcon />下载可执行服务器启动器 (.jar)</a>
     </div>
     <p>
       <a href={installerJarUrl}>
-        Download installer for older versions or manual installation
+        下载旧版本或手动安装的安装程序
       </a>
     </p>
   </div>
 
-  <p>The executable jar is a small launcher that will start the Fabric enabled Minecraft server using the versions specified above. There is no need to use an installer when using this method.</p>
+  <p>这个可执行 .jar 文件是一个小型启动器，它会使用上面指定的版本启动启用了 Fabric 的 Minecraft 官方服务器。使用此方法无需安装程序。</p>
 
   <div style="margin-bottom: 15px;">
-    <h4>CLI download:</h4>
-    <p>Use the following command to download the executable server launcher to the current directory</p>
+    <h4>命令行下载：</h4>
+    <p>使用以下命令将可执行服务器启动器下载到当前目录。</p>
     <code>
       curl -OJ {serverJarUrl}
     </code>
   </div>
 
   <div style="margin-bottom: 15px;">
-    <h4>Launch command:</h4>
-    <p>Use the following command to run the executable server launcher with 2GB of ram. After a small wait the Minecraft server will be ready.</p>
+    <h4>启动命令：</h4>
+    <p>使用以下命令运行分配了 2GB 运行内存的服务器启动器。稍等片刻安装了 Fabric 的 Minecraft 服务器就会准备就绪。</p>
     <code>
       java -Xmx2G -jar {serverJarFilename} nogui
     </code>
   </div>
 
 {:catch error}
-  <p style="color: red">Error: {error.message}</p>
+  <p style="color: red">错误：{error.message}</p>
   <p>
-    For support please visit one of our
-    <a href="/discuss/">community discussion</a>
-    groups.
+    如需帮助，请访问我们的<a href="/discuss/">社区讨论群组</a>。
   </p>
 {/await}
 

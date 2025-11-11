@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Fabric command line tools"
+title: "Fabric 命令行工具"
 permalink: /develop/cli/
 ---
 <style type="text/css">
@@ -14,55 +14,55 @@ permalink: /develop/cli/
   }
 </style>
 
-The Fabric command line tools (CLI) can be used by mod developers to generate new mods directly from your terminal. If you happen to find an issue please make sure to report it on our [GitHub](https://github.com/FabricMC/fabricmc.net) page.
+Fabric 命令行工具 (Fabric CLI) 可供 Fabric Mod 开发者直接从终端生成新项目。如果您发现任何问题，请务必在我们的 [GitHub](https://github.com/FabricMC/fabricmc.net) 页面上报告。
 
-## Installation
+## 安装
 
-The Fabric CLI tools require the [deno runtime](https://deno.com/runtime) to be installed on your system. Deno is a cross platform JavaScript runtime that allows us to use one code base between the web and desktop. After following the [deno installation](https://deno.com/manual/getting_started/installation) instructions, run the following command to globally install the fabric CLI tools:
+Fabric 命令行工具需要您的系统上装有 [Deno 运行时](https://deno.com/)。Deno 是一个跨平台的 JavaScript 运行时，它允许我们在 Web 和桌面之间使用同一套代码库。按照 [Deno 安装](https://docs.deno.com/runtime/getting_started/installation/) 的说明进行操作后，运行以下命令以全局安装 Fabric CLI：
 
 <code class="command">
 deno install -A -g -n fabric https://fabricmc.net/cli
 </code>
 
-To update the Fabric command line tools run:
+要更新 Fabric CLI，请运行：
 
 <code class="command">
 fabric upgrade
 </code>
 
-If you wish to remove the Fabric CLI tools run:
+要卸载 Fabric CLI，请运行：
 
 <code class="command">
 deno uninstall fabric
 </code>
 
-## Usage
-The Fabric CLI tools currently offer one main sub-command, `init`.
+## 用法
+Fabric 命令行工具目前提供一个主要子命令，即 `init`。
 
-The `init` sub-command can be used to generate a customised template mod. To generate a new mod in the current directory, the following command can be used:
+`init` 子命令用于从模板生成 Fabric Mod 项目。要在当前目录中生成新项目，可以使用以下命令：
 
 <code class="command">
 fabric init
 </code>
 
-You can optionally pass a directory path, if the directory does not exist it will be created. 
+您可以选择传递目录路径参数，如果目录不存在，则会创建该目录。
 
 <code class="command">
 fabric init MyCoolMod
 </code>
 
-If you wish to accept all of the default values you can pass the `-y` argument. The directory name is then used to infulence the mod name.
+如果您希望接受所有默认值，可以传递 `-y` 参数。目录名称将用于影响 Mod 名称。
 
 <code class="command">
 fabric init MyCoolMod -y
 </code>
 
-### Run without installing
+### 在没有安装 Fabric CLI 的前提下运行
 
-If you do not wish to install the Fabric CLI tools to your system, you can use deno to run it directly like so:
+如果您不想在系统中安装 Fabric 命令行工具，可以使用 Deno 直接运行它，如下所示：
 
 <code class="command">
 deno run https://fabricmc.net/cli init
 </code>
 
-Deno is secure by default, so will ask for [permission](https://deno.land/manual/basics/permissions) before making any changes to your system.
+Deno 默认是安全至上的，因此在对您的系统进行任何更改之前都会进行[权限](https://docs.deno.com/runtime/fundamentals/security/)请求。
