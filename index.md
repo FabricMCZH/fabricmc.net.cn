@@ -55,7 +55,7 @@ layout: default
          <article class="column">
             <h3>探索</h3>
             <section>
-               <p>Fabric Wiki 为开发者和玩家提供了丰富的文档。您还可以从 <a href="https://discord.gg/v6v4pMv">Fabric Discord 服务器</a> 获取更多帮助，或者在 <a href="https://github.com/orgs/FabricMC/discussions">GitHub Discussions</a> 提问。<br/><br/></p>
+               <p>Fabric Wiki 为开发者和玩家提供了丰富的文档。您还可以从 <a href="https://discord.gg/v6v4pMv">Fabric Discord 服务器</a> 获取更多帮助，或者在 <a href="https://github.com/orgs/FabricMC/discussions">GitHub Discussions</a> 提问。</p>
             </section>
             <a class="button secondary" href="https://wiki.fabricmc.net">访问 Fabric Wiki</a>
          </article>
