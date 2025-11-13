@@ -70,7 +70,7 @@ layout: default
       <li><a href="https://github.com/FabricMC/fabric-loom">Fabric Loom</a> 一款 Gradle 插件，使开发者能够轻松开发和调试 Fabric Mod。</li>
       <li><a href="https://github.com/FabricMC/fabric-language-kotlin">Fabric Language Kotlin</a> 在 Fabric Mod 中使用 Kotlin 编程语言。</li>
       <li><a href="https://github.com/FabricMC/intermediary">Intermediary</a> 包含不同 Minecraft 版本之间的匹配信息，让跨版本 Mod 成为可能。</li>
-      <li><a href="https://github.com/FabricMC/tiny-remapper">Tiny Remapper</a> 一款小巧高效的 JAR 文件重映射工具。</li>
+      <li><a href="https://github.com/FabricMC/tiny-remapper">Tiny Remapper</a> 一款小巧高效的 .jar 文件重映射工具。</li>
       <li><a href="https://github.com/FabricMC/mapping-io">Mapping IO</a> 一个用于读取、操作和写入映射文件的库，支持多种格式。</li>
    </ul>
    </section>

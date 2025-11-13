@@ -166,7 +166,7 @@
         {/if}
 
         <div class="form-line">
-            <h3>Package Name:</h3>
+            <h3>包名：</h3>
             <hr />
             <p>
                 为你的新 Mod 选择一个独一无二的包名。包名必须只有你才能使用。如果你不确定，可以使用 <code>name.modid</code> 格式的包名。
