@@ -4210,7 +4210,7 @@ function Qn(E) {
   }
   return D = Ut(E), _ = _t[D] = Gt[D](E), {
     c() {
-      f = nt("div"), e = nt("div"), h = nt("h3"), h.textContent = "Mod 名：", c = lt(), r = nt("hr"), a = lt(), st.c(), n = lt(), o = nt("input"), p = lt(), pt && pt.c(), m = lt(), Ct && Ct.c(), b = lt(), y = nt("div"), l = nt("h3"), l.textContent = "Package Name:", g = lt(), s = nt("hr"), d = lt(), u = nt("p"), u.innerHTML = '为你的新 Mod 选择一个独一无二的包名。包名必须只有你才能使用。如果你不确定，可以使用 <code class="svelte-c4460r">name.modid</code> 格式的包名。', w = lt(), C = nt("input"), T = lt();
+      f = nt("div"), e = nt("div"), h = nt("h3"), h.textContent = "Mod 名：", c = lt(), r = nt("hr"), a = lt(), st.c(), n = lt(), o = nt("input"), p = lt(), pt && pt.c(), m = lt(), Ct && Ct.c(), b = lt(), y = nt("div"), l = nt("h3"), l.textContent = "包名：", g = lt(), s = nt("hr"), d = lt(), u = nt("p"), u.innerHTML = '为你的新 Mod 选择一个独一无二的包名。包名必须只有你才能使用。如果你不确定，可以使用 <code class="svelte-c4460r">name.modid</code> 格式的包名。', w = lt(), C = nt("input"), T = lt();
       for (let et = 0; et < wt.length; et += 1)
         wt[et].c();
       F = lt(), L = nt("div"), G = nt("h3"), G.textContent = "Minecraft 版本：", Z = lt(), z = nt("hr"), X = lt(), rt = nt("p"), rt.textContent = "选择你希望 Mod 支持的 Minecraft 版本。", k = lt(), V = nt("select");
