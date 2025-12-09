@@ -49,7 +49,7 @@
 minecraft_version={minecraftVersion}
 yarn_mappings={yarnVersion}
 loader_version={loaderVersion}
-loom_version=1.13-SNAPSHOT
+loom_version=1.14-SNAPSHOT
 
 # Fabric API
 fabric_version={apiVersion}
@@ -81,7 +81,7 @@ fabric_version={apiVersion}
 
 <h2>Fabric Loom</h2>
 
-<p>推荐的 Fabric Loom 版本是 <strong>1.13-SNAPSHOT</strong>。这通常在 build.gradle 文件的顶部附近定义。</p>
+<p>推荐的 Fabric Loom 版本是 <strong>1.14-SNAPSHOT</strong>。这通常在 build.gradle 文件的顶部附近定义。</p>
 
 <style>
     .copy-code {
