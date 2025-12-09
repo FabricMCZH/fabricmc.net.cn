@@ -48,7 +48,7 @@ loader_version=`), y = V(
         /*loaderVersion*/
         s[2]
       ), U = V(`
-loom_version=1.13-SNAPSHOT
+loom_version=1.14-SNAPSHOT
 
 # Fabric API
 fabric_version=`), I = V(
@@ -183,7 +183,7 @@ function Ae(s) {
     l
   ), {
     c() {
-      l.block.c(), t = M(), f = m("hr"), p = M(), c = m("h2"), c.textContent = "Fabric Loom", b = M(), k = m("p"), k.innerHTML = "推荐的 Fabric Loom 版本是 <strong>1.13-SNAPSHOT</strong>。这通常在 build.gradle 文件的顶部附近定义。";
+      l.block.c(), t = M(), f = m("hr"), p = M(), c = m("h2"), c.textContent = "Fabric Loom", b = M(), k = m("p"), k.innerHTML = "推荐的 Fabric Loom 版本是 <strong>1.14-SNAPSHOT</strong>。这通常在 build.gradle 文件的顶部附近定义。";
     },
     m(o, _) {
       l.block.m(o, l.anchor = _), l.mount = () => t.parentNode, l.anchor = t, n(o, t, _), n(o, f, _), n(o, p, _), n(o, c, _), n(o, b, _), n(o, k, _);
